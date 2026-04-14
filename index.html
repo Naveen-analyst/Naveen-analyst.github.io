@@ -3,416 +3,253 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Naveen - Data Analyst</title>
+    <title>Naveen | Data Analyst</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; color: #222; background: #fff; }
 
-        body {
-            font-family: Arial, sans-serif;
-            color: #222;
-            background: #fff;
-        }
-
-        /* NAV */
         nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 14px 32px;
-            border-bottom: 1px solid #eee;
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 16px 40px; border-bottom: 1px solid #eee;
+            position: sticky; top: 0; background: #fff; z-index: 100;
         }
-
-        .logo {
-            font-size: 18px;
-            font-weight: bold;
-        }
-
+        .logo { font-size: 20px; font-weight: 700; color: #185FA5; }
         .nav-links a {
-            margin-left: 20px;
-            text-decoration: none;
-            color: #555;
-            font-size: 14px;
+            margin-left: 24px; text-decoration: none;
+            color: #555; font-size: 14px; font-weight: 500;
         }
+        .nav-links a:hover { color: #185FA5; }
 
-        .nav-links a:hover {
-            color: #185FA5;
-        }
-
-        /* HERO */
         .hero {
-            display: flex;
-            align-items: center;
-            gap: 28px;
-            padding: 48px 32px;
-            border-bottom: 1px solid #eee;
+            display: flex; align-items: center; gap: 36px;
+            padding: 60px 40px; background: #f8fbff;
+            border-bottom: 1px solid #e0ecf8;
         }
-
         .avatar {
-            width: 90px;
-            height: 90px;
-            border-radius: 50%;
-            background: #E6F1FB;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 32px;
-            font-weight: bold;
-            color: #185FA5;
-            flex-shrink: 0;
+            width: 100px; height: 100px; border-radius: 50%;
+            background: #185FA5; display: flex; align-items: center;
+            justify-content: center; font-size: 36px; font-weight: 700;
+            color: #fff; flex-shrink: 0;
         }
-
-        .hero h1 {
-            font-size: 28px;
-            margin-bottom: 8px;
-        }
-
-        .hero p {
-            font-size: 15px;
-            color: #555;
-            margin-bottom: 14px;
-            max-width: 500px;
-            line-height: 1.6;
-        }
-
-        .badges {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 16px;
-        }
-
-        .badge {
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 500;
-        }
-
+        .hero h1 { font-size: 32px; font-weight: 700; margin-bottom: 6px; }
+        .hero .role { font-size: 16px; color: #185FA5; font-weight: 600; margin-bottom: 10px; }
+        .hero p { font-size: 15px; color: #555; max-width: 520px; line-height: 1.7; margin-bottom: 18px; }
+        .badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+        .badge { padding: 5px 14px; border-radius: 20px; font-size: 13px; font-weight: 500; }
         .b-blue   { background: #E6F1FB; color: #0C447C; }
         .b-teal   { background: #E1F5EE; color: #085041; }
         .b-purple { background: #EEEDFE; color: #3C3489; }
         .b-amber  { background: #FAEEDA; color: #633806; }
-        .b-coral  { background: #FAECE7; color: #712B13; }
-
-        .btns {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-
+        .btns { display: flex; gap: 12px; flex-wrap: wrap; }
         .btn {
-            padding: 8px 20px;
-            border-radius: 8px;
-            font-size: 13px;
-            border: 1px solid #ccc;
-            cursor: pointer;
-            background: #fff;
-            color: #222;
+            padding: 10px 22px; border-radius: 8px; font-size: 14px;
+            font-weight: 600; border: none; cursor: pointer;
         }
+        .btn-main { background: #185FA5; color: #fff; }
+        .btn-out { background: #fff; color: #185FA5; border: 2px solid #185FA5; }
+        .btn:hover { opacity: 0.88; }
 
-        .btn-main {
-            background: #185FA5;
-            color: #fff;
-            border-color: #185FA5;
-        }
-
-        .btn:hover { opacity: 0.85; }
-
-        /* STATS */
-        .section {
-            padding: 36px 32px;
-            border-bottom: 1px solid #eee;
-        }
-
+        .section { padding: 50px 40px; border-bottom: 1px solid #eee; }
         .sec-title {
-            font-size: 12px;
-            font-weight: bold;
-            color: #888;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            margin-bottom: 20px;
+            font-size: 13px; font-weight: 700; color: #185FA5;
+            text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 28px;
         }
 
         .stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-            gap: 14px;
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 16px;
         }
-
         .stat {
-            background: #f5f5f5;
-            border-radius: 8px;
-            padding: 16px;
+            background: #f8fbff; border: 1px solid #e0ecf8;
+            border-radius: 12px; padding: 20px; text-align: center;
         }
+        .stat-num { font-size: 28px; font-weight: 700; color: #185FA5; margin-bottom: 6px; }
+        .stat-label { font-size: 13px; color: #666; }
 
-        .stat-num {
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 4px;
-        }
-
-        .stat-label {
-            font-size: 13px;
-            color: #666;
-        }
-
-        /* PROJECTS */
         .projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 14px;
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
         }
-
         .card {
-            background: #fff;
-            border: 1px solid #eee;
-            border-radius: 12px;
-            padding: 18px;
+            background: #fff; border: 1px solid #e0ecf8;
+            border-radius: 14px; padding: 22px;
+            transition: box-shadow 0.2s;
         }
-
-        .card-top {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 10px;
-        }
-
+        .card:hover { box-shadow: 0 4px 20px rgba(24,95,165,0.12); }
+        .card-top { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
         .card-icon {
-            width: 36px;
-            height: 36px;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 18px;
+            width: 40px; height: 40px; border-radius: 10px;
+            display: flex; align-items: center; justify-content: center; font-size: 20px;
         }
-
-        .card h3 {
-            font-size: 15px;
-        }
-
-        .card p {
-            font-size: 13px;
-            color: #555;
-            line-height: 1.5;
-            margin-bottom: 10px;
-        }
-
+        .card h3 { font-size: 16px; font-weight: 600; }
+        .card p { font-size: 13px; color: #555; line-height: 1.6; margin-bottom: 12px; }
         .card-tag {
-            display: inline-block;
-            padding: 2px 10px;
-            border-radius: 20px;
-            font-size: 11px;
-            margin-right: 4px;
+            display: inline-block; padding: 3px 10px;
+            border-radius: 20px; font-size: 11px; font-weight: 500; margin-right: 4px;
         }
 
-        /* SKILL BARS */
-        .skill-bar-wrap {
-            margin-bottom: 16px;
-            max-width: 500px;
-        }
+        .skill-bar-wrap { margin-bottom: 18px; max-width: 560px; }
+        .skill-name { display: flex; justify-content: space-between; font-size: 14px; font-weight: 500; margin-bottom: 7px; }
+        .skill-pct { color: #185FA5; font-weight: 600; }
+        .bar-bg { background: #e8f0fe; border-radius: 6px; height: 8px; }
+        .bar-fill { height: 8px; border-radius: 6px; }
 
-        .skill-name {
-            display: flex;
-            justify-content: space-between;
-            font-size: 14px;
-            margin-bottom: 6px;
-        }
-
-        .skill-pct { color: #888; }
-
-        .bar-bg {
-            background: #eee;
-            border-radius: 4px;
-            height: 7px;
-        }
-
-        .bar-fill {
-            height: 7px;
-            border-radius: 4px;
-        }
-
-        /* CONTACT */
         .contact {
-            text-align: center;
-            padding: 40px 32px;
+            text-align: center; padding: 60px 40px;
+            background: #f8fbff;
         }
-
-        .contact h2 {
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-
-        .contact p {
-            color: #555;
-            margin-bottom: 24px;
-            font-size: 15px;
-        }
-
-        .contact-btns {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-
+        .contact h2 { font-size: 26px; font-weight: 700; margin-bottom: 10px; }
+        .contact p { color: #555; font-size: 15px; margin-bottom: 28px; }
+        .contact-btns { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
         .contact-btns a {
-            padding: 10px 22px;
-            border-radius: 8px;
-            font-size: 13px;
-            border: 1px solid #ccc;
-            text-decoration: none;
-            color: #222;
-            background: #f5f5f5;
+            padding: 11px 24px; border-radius: 8px; font-size: 14px;
+            font-weight: 600; text-decoration: none;
+            background: #185FA5; color: #fff; transition: opacity 0.2s;
+        }
+        .contact-btns a:hover { opacity: 0.85; }
+        .contact-btns a.outline {
+            background: #fff; color: #185FA5; border: 2px solid #185FA5;
         }
 
-        .contact-btns a:hover { background: #e0e0e0; }
-
-        /* FOOTER */
         footer {
-            text-align: center;
-            padding: 20px;
-            font-size: 13px;
-            color: #aaa;
-            border-top: 1px solid #eee;
+            text-align: center; padding: 22px;
+            font-size: 13px; color: #aaa; border-top: 1px solid #eee;
+        }
+
+        @media (max-width: 600px) {
+            .hero { flex-direction: column; padding: 36px 20px; text-align: center; }
+            .badges { justify-content: center; }
+            .btns { justify-content: center; }
+            .section { padding: 36px 20px; }
+            nav { padding: 14px 20px; }
+            .nav-links a { margin-left: 14px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- NAV -->
-    <nav>
-        <div class="logo">Naveen</div>
-        <div class="nav-links">
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#skills">Skills</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </nav>
+<nav>
+    <div class="logo">Naveen</div>
+    <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
 
-    <!-- HERO -->
-    <div class="hero" id="about">
-        <div class="avatar">N</div>
-        <div>
-            <h1>Naveen</h1>
-            <p>Data Analyst — Sonipat, Haryana. Data se meaningful insights nikalke better decisions lene mein help karta hoon.</p>
-            <div class="badges">
-                <span class="badge b-blue">Google Sheets</span>
-                <span class="badge b-teal">Python</span>
-                <span class="badge b-purple">Data Visualization</span>
-                <span class="badge b-amber">SQL</span>
-            </div>
-            <div class="btns">
-                <button class="btn btn-main">Hire Me</button>
-                <button class="btn">Download CV</button>
-                <button class="btn">View Projects</button>
-            </div>
+<div class="hero" id="about">
+    <div class="avatar">N</div>
+    <div>
+        <h1>Naveen</h1>
+        <div class="role">Data Analyst — Sonipat, Haryana</div>
+        <p>Passionate about turning raw data into meaningful insights. I help businesses make smarter decisions through data analysis, visualization, and automation.</p>
+        <div class="badges">
+            <span class="badge b-blue">Google Sheets</span>
+            <span class="badge b-teal">Python</span>
+            <span class="badge b-purple">Data Visualization</span>
+            <span class="badge b-amber">SQL</span>
+        </div>
+        <div class="btns">
+            <button class="btn btn-main">Hire Me</button>
+            <button class="btn btn-out">Download CV</button>
         </div>
     </div>
+</div>
 
-    <!-- STATS -->
-    <div class="section">
-        <div class="sec-title">At a Glance</div>
-        <div class="stats">
-            <div class="stat">
-                <div class="stat-num" style="color:#185FA5;">5+</div>
-                <div class="stat-label">Projects Completed</div>
-            </div>
-            <div class="stat">
-                <div class="stat-num" style="color:#0F6E56;">3+</div>
-                <div class="stat-label">Tools Mastered</div>
-            </div>
-            <div class="stat">
-                <div class="stat-num" style="color:#534AB7;">100%</div>
-                <div class="stat-label">Dedication</div>
-            </div>
-            <div class="stat">
-                <div class="stat-num" style="color:#854F0B;">Open</div>
-                <div class="stat-label">To Opportunities</div>
-            </div>
+<div class="section">
+    <div class="sec-title">At a Glance</div>
+    <div class="stats">
+        <div class="stat">
+            <div class="stat-num">5+</div>
+            <div class="stat-label">Projects Completed</div>
+        </div>
+        <div class="stat">
+            <div class="stat-num">3+</div>
+            <div class="stat-label">Tools Mastered</div>
+        </div>
+        <div class="stat">
+            <div class="stat-num">100%</div>
+            <div class="stat-label">Dedication</div>
+        </div>
+        <div class="stat">
+            <div class="stat-num">Open</div>
+            <div class="stat-label">To Opportunities</div>
         </div>
     </div>
+</div>
 
-    <!-- PROJECTS -->
-    <div class="section" id="projects">
-        <div class="sec-title">Projects</div>
-        <div class="projects">
-            <div class="card">
-                <div class="card-top">
-                    <div class="card-icon" style="background:#E6F1FB;">📊</div>
-                    <h3>Sales Dashboard</h3>
-                </div>
-                <p>Google Sheets mein sales data ka complete dashboard — charts, filters aur monthly summary ke saath.</p>
-                <span class="card-tag b-blue">Google Sheets</span>
-                <span class="card-tag b-teal">Charts</span>
+<div class="section" id="projects">
+    <div class="sec-title">Projects</div>
+    <div class="projects">
+        <div class="card">
+            <div class="card-top">
+                <div class="card-icon" style="background:#E6F1FB;">📊</div>
+                <h3>Sales Dashboard</h3>
             </div>
-            <div class="card">
-                <div class="card-top">
-                    <div class="card-icon" style="background:#E1F5EE;">🐍</div>
-                    <h3>Python Data Cleaner</h3>
-                </div>
-                <p>Python script jo messy Excel data ko automatically clean karke analysis-ready banata hai.</p>
-                <span class="card-tag b-teal">Python</span>
-                <span class="card-tag b-purple">Pandas</span>
+            <p>A complete sales data dashboard in Google Sheets with charts, filters, and monthly summaries.</p>
+            <span class="card-tag b-blue">Google Sheets</span>
+            <span class="card-tag b-teal">Charts</span>
+        </div>
+        <div class="card">
+            <div class="card-top">
+                <div class="card-icon" style="background:#E1F5EE;">🐍</div>
+                <h3>Python Data Cleaner</h3>
             </div>
-            <div class="card">
-                <div class="card-top">
-                    <div class="card-icon" style="background:#EEEDFE;">🔗</div>
-                    <h3>Sheets Automation</h3>
-                </div>
-                <p>Google Sheets ko Python se automatically update karne wala tool — OAuth 2.0 integration ke saath.</p>
-                <span class="card-tag b-purple">API</span>
-                <span class="card-tag b-amber">Automation</span>
+            <p>A Python script that automatically cleans messy Excel data and makes it analysis-ready.</p>
+            <span class="card-tag b-teal">Python</span>
+            <span class="card-tag b-purple">Pandas</span>
+        </div>
+        <div class="card">
+            <div class="card-top">
+                <div class="card-icon" style="background:#EEEDFE;">🔗</div>
+                <h3>Sheets Automation</h3>
             </div>
+            <p>A tool to automatically update Google Sheets using Python with OAuth 2.0 integration.</p>
+            <span class="card-tag b-purple">API</span>
+            <span class="card-tag b-amber">Automation</span>
         </div>
     </div>
+</div>
 
-    <!-- SKILLS -->
-    <div class="section" id="skills">
-        <div class="sec-title">Skills</div>
-        <div class="skill-bar-wrap">
-            <div class="skill-name"><span>Google Sheets</span><span class="skill-pct">85%</span></div>
-            <div class="bar-bg"><div class="bar-fill" style="width:85%;background:#185FA5;"></div></div>
-        </div>
-        <div class="skill-bar-wrap">
-            <div class="skill-name"><span>Python</span><span class="skill-pct">70%</span></div>
-            <div class="bar-bg"><div class="bar-fill" style="width:70%;background:#0F6E56;"></div></div>
-        </div>
-        <div class="skill-bar-wrap">
-            <div class="skill-name"><span>Data Visualization</span><span class="skill-pct">75%</span></div>
-            <div class="bar-bg"><div class="bar-fill" style="width:75%;background:#534AB7;"></div></div>
-        </div>
-        <div class="skill-bar-wrap">
-            <div class="skill-name"><span>SQL</span><span class="skill-pct">60%</span></div>
-            <div class="bar-bg"><div class="bar-fill" style="width:60%;background:#854F0B;"></div></div>
-        </div>
-        <div class="skill-bar-wrap">
-            <div class="skill-name"><span>HTML / CSS</span><span class="skill-pct">50%</span></div>
-            <div class="bar-bg"><div class="bar-fill" style="width:50%;background:#993C1D;"></div></div>
-        </div>
+<div class="section" id="skills">
+    <div class="sec-title">Skills</div>
+    <div class="skill-bar-wrap">
+        <div class="skill-name"><span>Google Sheets</span><span class="skill-pct">85%</span></div>
+        <div class="bar-bg"><div class="bar-fill" style="width:85%;background:#185FA5;"></div></div>
     </div>
-
-    <!-- CONTACT -->
-    <div class="contact" id="contact">
-        <h2>Kaam Karte Hain Saath!</h2>
-        <p>Koi project hai ya baat karni hai? Neeche se reach karo!</p>
-        <div class="contact-btns">
-            <a href="mailto:naveen@email.com">Email Karo</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">GitHub</a>
-            <a href="#">WhatsApp</a>
-        </div>
+    <div class="skill-bar-wrap">
+        <div class="skill-name"><span>Python</span><span class="skill-pct">70%</span></div>
+        <div class="bar-bg"><div class="bar-fill" style="width:70%;background:#0F6E56;"></div></div>
     </div>
+    <div class="skill-bar-wrap">
+        <div class="skill-name"><span>Data Visualization</span><span class="skill-pct">75%</span></div>
+        <div class="bar-bg"><div class="bar-fill" style="width:75%;background:#534AB7;"></div></div>
+    </div>
+    <div class="skill-bar-wrap">
+        <div class="skill-name"><span>SQL</span><span class="skill-pct">60%</span></div>
+        <div class="bar-bg"><div class="bar-fill" style="width:60%;background:#854F0B;"></div></div>
+    </div>
+    <div class="skill-bar-wrap">
+        <div class="skill-name"><span>HTML / CSS</span><span class="skill-pct">50%</span></div>
+        <div class="bar-bg"><div class="bar-fill" style="width:50%;background:#993C1D;"></div></div>
+    </div>
+</div>
 
-    <!-- FOOTER -->
-    <footer>
-        Made with dedication by Naveen — Sonipat, Haryana
-    </footer>
+<div class="contact" id="contact">
+    <h2>Let's Work Together!</h2>
+    <p>Have a project in mind or want to connect? Reach out below!</p>
+    <div class="contact-btns">
+        <a href="mailto:naveen@email.com">Email Me</a>
+        <a href="#" class="outline">LinkedIn</a>
+        <a href="#" class="outline">GitHub</a>
+        <a href="#" class="outline">WhatsApp</a>
+    </div>
+</div>
+
+<footer>
+    Designed & Built by Naveen — Sonipat, Haryana &nbsp;|&nbsp; 2026
+</footer>
 
 </body>
 </html>
